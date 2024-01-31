@@ -1,46 +1,11 @@
 {
   "produtos": [
     {
-      "id": "db57",
-      "nomeProduto": "peu",
-      "codProduto": 12,
-      "precoProduto": 28,
-      "descProduto": "aaa\n"
-    },
-    {
-      "id": "bb7f",
-      "nomeProduto": "114",
-      "codProduto": 1212,
-      "precoProduto": 212,
-      "descProduto": "sdad"
-    },
-    {
-      "id": "afe2",
-      "nomeProduto": "dasdad",
-      "codProduto": 34,
-      "precoProduto": 3232,
-      "descProduto": "dsadas"
-    },
-    {
-      "id": "6aed",
-      "nomeProduto": "ads",
-      "codProduto": 2,
-      "precoProduto": 222,
-      "descProduto": "sada"
-    },
-    {
-      "id": "8596",
-      "nomeProduto": "das",
-      "codProduto": 121,
-      "precoProduto": 12,
-      "descProduto": "sassa"
-    },
-    {
-      "id": "7055",
-      "nomeProduto": "dasd",
-      "codProduto": 22,
-      "precoProduto": 222,
-      "descProduto": "dsada"
+      "id": "b39e",
+      "nomeProduto": "pneu1",
+      "codProduto": 1,
+      "precoProduto": 100,
+      "descProduto": "pneu1 marca 1"
     }
   ]
 }

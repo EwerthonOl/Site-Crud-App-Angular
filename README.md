@@ -1,27 +1,22 @@
-# CrudApp
+# Crud AngularApp Json-Server
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+Este projeto foi gerado com Angular CLI versão 17.0.10, Angular Material versão 17.1.1, Json-server versão 1.0.
 
-## Development server
+## Rodar o projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Clone o repositório com `git clone` ou fork.
 
-## Code scaffolding
+Rode `ng serve` para criar o servidor http. Navegue para `http://localhost:4200/`. A aplicação vai atualizar automaticamente em qualquer mudança de arquivos.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Explicação do site
 
-## Build
+Na tela de inicio, é mostrada uma tabela com produtos cadastrados pelo usuário, esses produtos estão no Json-server.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Na ultima coluna da tabela tem os botões de pincel para editar o produto adicionado, e lixeira para deletar.
 
-## Running unit tests
+Todas essas ações são notificadas pelo site.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para adicionar mais produtos, deve clicar no botão `+Add Produto` no canto superior direito, com isso abrirá o formulário.
 
-## Running end-to-end tests
+No formulário os campos nome, código, e preço do produto são obrigatórios para o cadastro, apertar em salvar irá salvar os dados no servidor, e eles serão apresentados na tabela.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
