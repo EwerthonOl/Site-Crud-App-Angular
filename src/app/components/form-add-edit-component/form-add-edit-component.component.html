@@ -6,13 +6,24 @@
   </article>
 
   <!-- CAMPOS FORM E BUTÕES -->
-  <form mat-dialog-content class="formProduto" [formGroup]="formProduto" (ngSubmit)="submitForm()">
+  <form
+    mat-dialog-content
+    class="formProduto"
+    [formGroup]="formProduto"
+    (ngSubmit)="submitForm()"
+  >
     <!-- CAMPO NOME -->
     <div class="row">
       <mat-form-field>
         <mat-label>Nome do produto</mat-label>
-        <input matInput type="text" placeholder="Ex. Pneu Choque" formControlName="nomeProduto"
-          [errorStateMatcher]="matcher" required>
+        <input
+          matInput
+          type="text"
+          placeholder="Ex. Pneu Choque"
+          formControlName="nomeProduto"
+          [errorStateMatcher]="matcher"
+          required
+        />
 
         @if (formProduto.get('nomeProduto') ?? true) {
         <mat-error>O nome é <strong>obrigatório.</strong></mat-error>
@@ -24,18 +35,33 @@
     <div class="row">
       <mat-form-field>
         <mat-label>Código</mat-label>
-        <input matInput type="number" placeholder="Ex. 10" formControlName="codProduto" [errorStateMatcher]="matcher"
-          required>
+        <input
+          matInput
+          type="number"
+          placeholder="Ex. 10"
+          formControlName="codProduto"
+          [errorStateMatcher]="matcher"
+          required
+        />
 
         @if (formProduto.get('codProduto') ?? true) {
-        <mat-error class="error">O código é <strong>obrigatório.</strong></mat-error>
+        <mat-error class="error"
+          >O código é <strong>obrigatório.</strong></mat-error
+        >
         }
       </mat-form-field>
 
       <mat-form-field>
         <mat-label>Preço</mat-label>
-        <input matInput type="number" class="example-right-align" placeholder="Ex. 100" formControlName="precoProduto"
-          [errorStateMatcher]="matcher" required>
+        <input
+          matInput
+          type="number"
+          class="example-right-align"
+          placeholder="Ex. 100"
+          formControlName="precoProduto"
+          [errorStateMatcher]="matcher"
+          required
+        />
         <span matTextPrefix>R$&nbsp;</span>
         <span matTextSuffix>.00</span>
 
@@ -49,15 +75,23 @@
     <div class="row">
       <mat-form-field>
         <mat-label>Descrição do produto</mat-label>
-        <textarea matInput type="text" placeholder="Ex. Um pneu da marca Choque, cuidado ao manusear"
-          formControlName="descProduto"></textarea>
+        <textarea
+          matInput
+          type="text"
+          placeholder="Ex. Um pneu da marca Choque, cuidado ao manusear"
+          formControlName="descProduto"
+        ></textarea>
       </mat-form-field>
     </div>
 
     <!-- BOTÕES SALVAR E CANCELAR FORM -->
     <div mat-dialog-actions class="buttonsCancelSave">
-      <button mat-raised-button type="button" mat-dialog-close="false">Cancelar</button>
-      <button mat-raised-button color="primary" type="submit">{{data ? 'Atualizar' : 'Salvar'}}</button>
+      <button mat-raised-button type="button" mat-dialog-close="false">
+        Cancelar
+      </button>
+      <button mat-raised-button color="primary" type="submit">
+        {{ data ? "Atualizar" : "Salvar" }}
+      </button>
     </div>
   </form>
 </section>

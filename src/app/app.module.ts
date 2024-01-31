@@ -30,8 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule, MatButtonModule, MatToolbarModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatTableModule, MatPaginatorModule, MatSortModule,
-    ReactiveFormsModule, MatSnackBarModule,
+    MatIconModule, MatButtonModule, MatToolbarModule, MatDialogModule, MatFormFieldModule, MatInputModule,
+    MatTableModule, MatPaginatorModule, MatSortModule, ReactiveFormsModule, MatSnackBarModule,
     HttpClientModule
   ],
   providers: [

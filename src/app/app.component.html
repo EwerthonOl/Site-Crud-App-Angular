@@ -3,9 +3,7 @@
   <span>Aplicação CRUD</span>
   <span class="spacer"></span>
 
-  <button mat-raised-button (click)="openAddEditEmpForm()">
-    +Add Produto
-  </button>
+  <button mat-raised-button (click)="openAddEditEmpForm()">+Add Produto</button>
 </mat-toolbar>
 
 <!-- FILTRO E FORM -->
@@ -13,7 +11,12 @@
   <!-- FILTRO -->
   <mat-form-field>
     <mat-label>Filtro</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Produto" #input>
+    <input
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="Ex. Produto"
+      #input
+    />
   </mat-form-field>
 
   <!-- TABELA E PAGINATOR -->
@@ -21,31 +24,43 @@
     <table mat-table [dataSource]="dataSource" matSort>
       <!-- COD Column -->
       <ng-container matColumnDef="codProduto">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Código do Produto </th>
-        <td mat-cell *matCellDef="let row"> {{row.codProduto}} </td>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Código do Produto
+        </th>
+        <td mat-cell *matCellDef="let row">{{ row.codProduto }}</td>
       </ng-container>
 
       <!-- NOME Column -->
       <ng-container matColumnDef="nomeProduto">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome do Produto </th>
-        <td mat-cell *matCellDef="let row"> {{row.nomeProduto}} </td>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Nome do Produto
+        </th>
+        <td mat-cell *matCellDef="let row">{{ row.nomeProduto }}</td>
       </ng-container>
 
       <!-- PREÇO Column -->
       <ng-container matColumnDef="precoProduto">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Preço do Produto </th>
-        <td mat-cell *matCellDef="let row"> {{row.precoProduto | currency:'BRL'}} </td>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Preço do Produto
+        </th>
+        <td mat-cell *matCellDef="let row">
+          {{ row.precoProduto | currency : "BRL" }}
+        </td>
       </ng-container>
 
       <!-- DESCRIÇÃO Column -->
       <ng-container matColumnDef="descProduto">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Descrição do Produto </th>
-        <td mat-cell *matCellDef="let row"> {{row.descProduto}} </td>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Descrição do Produto
+        </th>
+        <td mat-cell *matCellDef="let row">{{ row.descProduto }}</td>
       </ng-container>
 
       <!-- AÇOES Column -->
       <ng-container matColumnDef="action">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Editar/Deletar </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Editar/Deletar
+        </th>
         <td mat-cell *matCellDef="let row">
           <button mat-icon-button color="primary" (click)="openEditForm(row)">
             <mat-icon>edit</mat-icon>
@@ -58,14 +73,19 @@
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 
       <!-- Row shown when there is no matching data. -->
       <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4">Sem dados para a tabela no momento.</td>
+        <td class="mat-cell" colspan="4">
+          Sem dados para a tabela no momento.
+        </td>
       </tr>
     </table>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Selecionar página de Produtos"></mat-paginator>
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      aria-label="Selecionar página de Produtos"
+    ></mat-paginator>
   </div>
 </section>

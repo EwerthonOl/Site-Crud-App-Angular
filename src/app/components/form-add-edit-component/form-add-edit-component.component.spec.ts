@@ -10,8 +10,8 @@ describe('FormAddEditComponentComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [FormAddEditComponentComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(FormAddEditComponentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -19,4 +19,3 @@ Todas essas ações são notificadas pelo site.
 Para adicionar mais produtos, deve clicar no botão `+Add Produto` no canto superior direito, com isso abrirá o formulário.
 
 No formulário os campos nome, código, e preço do produto são obrigatórios para o cadastro, apertar em salvar irá salvar os dados no servidor, e eles serão apresentados na tabela.
-

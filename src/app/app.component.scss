@@ -3,41 +3,41 @@
 }
 
 // FILTRO E FORM
-.section-table{
+.section-table {
   padding-top: 1rem;
   margin: 0 auto;
 
   max-width: 80vw;
 
   // FILTRO
-  mat-form-field{
+  mat-form-field {
     width: 100%;
   }
 
   // TABELA E PAGINATOR
-  .table-container{
+  .table-container {
     overflow: auto;
     padding-bottom: 1rem;
 
     table {
       max-width: 80vw;
-    
-      td, th {
+
+      td,
+      th {
         width: 25%;
       }
 
-      td{
+      td {
         max-width: 20rem;
       }
 
-      .mat-cell{
+      .mat-cell {
         padding: 1rem;
       }
     }
 
-    mat-paginator{
+    mat-paginator {
       padding-inline: 1rem;
     }
-
   }
 }
