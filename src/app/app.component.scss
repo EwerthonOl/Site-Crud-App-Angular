@@ -1,3 +1,7 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
 // FILTRO E FORM
 .section-table{
   padding-top: 1rem;
@@ -20,6 +24,14 @@
     
       td, th {
         width: 25%;
+      }
+
+      td{
+        max-width: 20rem;
+      }
+
+      .mat-cell{
+        padding: 1rem;
       }
     }
 
