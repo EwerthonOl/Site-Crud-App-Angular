@@ -10,38 +10,40 @@
 
 <!-- FILTRO E FORM -->
 <section class="section-table">
+  <!-- FILTRO -->
   <mat-form-field>
     <mat-label>Filtro</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Produto" #input>
   </mat-form-field>
 
+  <!-- TABELA E PAGINATOR -->
   <div class="table-container">
     <table mat-table [dataSource]="dataSource" matSort>
-      <!-- ID Column -->
+      <!-- COD Column -->
       <ng-container matColumnDef="codProduto">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Código do Produto </th>
         <td mat-cell *matCellDef="let row"> {{row.codProduto}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      <!-- NOME Column -->
       <ng-container matColumnDef="nomeProduto">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome do Produto </th>
         <td mat-cell *matCellDef="let row"> {{row.nomeProduto}} </td>
       </ng-container>
 
-      <!-- Name Column -->
+      <!-- PREÇO Column -->
       <ng-container matColumnDef="precoProduto">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Preço do Produto </th>
         <td mat-cell *matCellDef="let row"> {{row.precoProduto | currency:'BRL'}} </td>
       </ng-container>
 
-      <!-- Fruit Column -->
+      <!-- DESCRIÇÃO Column -->
       <ng-container matColumnDef="descProduto">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Descrição do Produto </th>
         <td mat-cell *matCellDef="let row"> {{row.descProduto}} </td>
       </ng-container>
 
-      <!-- Fruit Column -->
+      <!-- AÇOES Column -->
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Editar/Deletar </th>
         <td mat-cell *matCellDef="let row">

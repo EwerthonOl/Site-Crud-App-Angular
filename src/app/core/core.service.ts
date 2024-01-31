@@ -9,6 +9,7 @@ export class CoreService {
 
   constructor(private _snackBar: MatSnackBar) { }
 
+  // FUNÇÃO PARA NOTIFICAÇÕES NO SITE
   openSnackBar(message: string, action: string = "Ok") {
     this._snackBar.open(message, action, {
       duration: 10000,

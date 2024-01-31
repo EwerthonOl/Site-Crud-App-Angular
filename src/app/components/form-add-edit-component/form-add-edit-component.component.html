@@ -1,10 +1,13 @@
-<!-- FORMULARIO -->
+<!-- FORMULARIO E HEADER -->
 <section id="sectionFormCompleto">
+  <!-- CABEÇALHO -->
   <article mat-dialog-title class="title">
     <h2>Formulário do Produto</h2>
   </article>
 
+  <!-- CAMPOS FORM E BUTÕES -->
   <form mat-dialog-content class="formProduto" [formGroup]="formProduto" (ngSubmit)="submitForm()">
+    <!-- CAMPO NOME -->
     <div class="row">
       <mat-form-field>
         <mat-label>Nome do produto</mat-label>
@@ -17,6 +20,7 @@
       </mat-form-field>
     </div>
 
+    <!-- CAMPO CÓDIGO E PREÇO -->
     <div class="row">
       <mat-form-field>
         <mat-label>Código</mat-label>
@@ -41,6 +45,7 @@
       </mat-form-field>
     </div>
 
+    <!-- CAMPO DESCRIÇÃO -->
     <div class="row">
       <mat-form-field>
         <mat-label>Descrição do produto</mat-label>
@@ -49,6 +54,7 @@
       </mat-form-field>
     </div>
 
+    <!-- BOTÕES SALVAR E CANCELAR FORM -->
     <div mat-dialog-actions class="buttonsCancelSave">
       <button mat-raised-button type="button" mat-dialog-close="false">Cancelar</button>
       <button mat-raised-button color="primary" type="submit">{{data ? 'Atualizar' : 'Salvar'}}</button>

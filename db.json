@@ -1,13 +1,6 @@
 {
   "produtos": [
     {
-      "id": "adba",
-      "nomeProduto": "asdas",
-      "codProduto": 223,
-      "precoProduto": 23232,
-      "descProduto": "adsasda"
-    },
-    {
       "id": "db57",
       "nomeProduto": "peu",
       "codProduto": 12,
@@ -41,13 +34,6 @@
       "codProduto": 121,
       "precoProduto": 12,
       "descProduto": "sassa"
-    },
-    {
-      "id": "02d5",
-      "nomeProduto": "ad",
-      "codProduto": 12,
-      "precoProduto": 111,
-      "descProduto": "sdad"
     },
     {
       "id": "7055",

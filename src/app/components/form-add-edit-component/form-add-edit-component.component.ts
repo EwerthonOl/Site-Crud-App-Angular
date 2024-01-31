@@ -41,14 +41,14 @@ export class FormAddEditComponentComponent implements OnInit {
     console.log(typeof this.data)
   }
 
+  // FUNÇÃO  VALIDAR O FORM ANTES DE ENVIAR PARA ENVIAR O FORM
   submitForm(): void {
     if (this.formProduto.valid) {
-      console.log("formSubmited")
-
       this.onCreate(this.formProduto.value)
     }
   }
 
+  // FUNÇÃO PARA ENVIAR O FORM EM CASO DE ATUALIZAÇÃO OU CRIAÇÃO
   onCreate(produtoNovo: Produto) {
     if (this.data) {
       this._productService.editProduto(this.data.id, produtoNovo).subscribe({
@@ -71,9 +71,8 @@ export class FormAddEditComponentComponent implements OnInit {
         },
       })
     }
-
   }
 
+  // FUNÇÃO VALIDAR OS CAMPOS DO FORMULARIO
   matcher = new MyErrorStateMatcher();
-
 }

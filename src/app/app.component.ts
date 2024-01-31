@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -14,6 +15,8 @@ import { CoreService } from './core/core.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
+
+  // DATA DA TABELA DO MATERIAL
   displayedColumns: string[] = ['codProduto', 'nomeProduto', 'precoProduto', 'descProduto', 'action'];
   dataSource!: MatTableDataSource<Object>;
 
@@ -30,6 +33,11 @@ export class AppComponent implements OnInit {
     this.getProductsList();
   }
 
+  ngAfterViewInit(): void {
+    this.getProductsList();
+  }
+
+  // FUNÇÃO PARA ADICIONAR PRODUTOS
   openAddEditEmpForm(): void {
     const dialogRef = this._dialog.open(FormAddEditComponentComponent);
 
@@ -42,14 +50,13 @@ export class AppComponent implements OnInit {
     })
   }
 
+  // FUNÇÃO PARA LISTAR OS PRODUTOS
   getProductsList(): void {
     this._productService.getProdutosList().subscribe({
       next: (res) => {
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
-
-        console.log(res)
       },
       error: (err) => {
         console.error(err)
@@ -57,6 +64,7 @@ export class AppComponent implements OnInit {
     })
   }
 
+  // FUNÇÃO PARA DELETAR OS PRODUTOS
   deleteProducts(idProduto: string): void {
     this._productService.deleteProduto(idProduto).subscribe({
       next: (res) => {
@@ -69,7 +77,8 @@ export class AppComponent implements OnInit {
     })
   }
 
-  applyFilter(event: Event) {
+  // FUNÇÃO PARA FILTRAR OS PRODUTOS DA TABELA
+  applyFilter(event: Event): void {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
@@ -78,9 +87,8 @@ export class AppComponent implements OnInit {
     }
   }
 
+  // FUNÇÃO PARA ATUALIZAR PRODUTOS
   openEditForm(data: object): void {
-    console.log(typeof data)
-
     const dialogRef = this._dialog.open(FormAddEditComponentComponent, {
       data,
     })

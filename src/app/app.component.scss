@@ -1,22 +1,31 @@
-.example-spacer {
-  flex: 1 1 auto;
-}
-
+// FILTRO E FORM
 .section-table{
   padding-top: 1rem;
   margin: 0 auto;
 
   max-width: 80vw;
 
+  // FILTRO
   mat-form-field{
     width: 100%;
   }
 
-  table {
-    max-width: 80vw;
-  
-    td, th {
-      width: 25%;
+  // TABELA E PAGINATOR
+  .table-container{
+    overflow: auto;
+    padding-bottom: 1rem;
+
+    table {
+      max-width: 80vw;
+    
+      td, th {
+        width: 25%;
+      }
     }
+
+    mat-paginator{
+      padding-inline: 1rem;
+    }
+
   }
 }
