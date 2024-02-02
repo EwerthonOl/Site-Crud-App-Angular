@@ -3,7 +3,14 @@
   <span>Aplicação CRUD</span>
   <span class="spacer"></span>
 
-  <button mat-raised-button (click)="openAddEditEmpForm()">+Add Produto</button>
+  <button
+    title="Botão de adicionar produtos"
+    type="button"
+    mat-raised-button
+    (click)="openAddEditEmpForm()"
+  >
+    +Add Produto
+  </button>
 </mat-toolbar>
 
 <!-- FILTRO E FORM -->
@@ -12,6 +19,8 @@
   <mat-form-field>
     <mat-label>Filtro</mat-label>
     <input
+      title="Filtro de produtos"
+      type="text"
       matInput
       (keyup)="applyFilter($event)"
       placeholder="Ex. Produto"

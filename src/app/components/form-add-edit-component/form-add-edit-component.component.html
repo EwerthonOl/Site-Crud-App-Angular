@@ -17,6 +17,7 @@
       <mat-form-field>
         <mat-label>Nome do produto</mat-label>
         <input
+          title="Nome do produto"
           matInput
           type="text"
           placeholder="Ex. Pneu Choque"
@@ -36,6 +37,7 @@
       <mat-form-field>
         <mat-label>Código</mat-label>
         <input
+          title="Código do produto"
           matInput
           type="number"
           placeholder="Ex. 10"
@@ -54,6 +56,7 @@
       <mat-form-field>
         <mat-label>Preço</mat-label>
         <input
+          title="Preço do produto"
           matInput
           type="number"
           class="example-right-align"
@@ -76,8 +79,9 @@
       <mat-form-field>
         <mat-label>Descrição do produto</mat-label>
         <textarea
+          title="Descrição do produto"
           matInput
-          type="text"
+          type="textarea"
           placeholder="Ex. Um pneu da marca Choque, cuidado ao manusear"
           formControlName="descProduto"
         ></textarea>
@@ -86,10 +90,20 @@
 
     <!-- BOTÕES SALVAR E CANCELAR FORM -->
     <div mat-dialog-actions class="buttonsCancelSave">
-      <button mat-raised-button type="button" mat-dialog-close="false">
+      <button
+        title="Botão de cancelar"
+        mat-raised-button
+        type="button"
+        mat-dialog-close="false"
+      >
         Cancelar
       </button>
-      <button mat-raised-button color="primary" type="submit">
+      <button
+        title="Botão de salvar"
+        mat-raised-button
+        color="primary"
+        type="submit"
+      >
         {{ data ? "Atualizar" : "Salvar" }}
       </button>
     </div>

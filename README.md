@@ -6,6 +6,10 @@ Este projeto foi gerado com Angular CLI versão 17.0.10, Angular Material versã
 
 Clone o repositório com `git clone` ou fork.
 
+Ao abrir o projeto no editor de código, use `npm install` para instalar as dependêcias.
+
+Então, use `json-server --watch db.json` para iniciar o servidor dos produtos a serem cadastrados.
+
 Rode `ng serve` para criar o servidor http. Navegue para `http://localhost:4200/`. A aplicação vai atualizar automaticamente em qualquer mudança de arquivos.
 
 ## Explicação do site
